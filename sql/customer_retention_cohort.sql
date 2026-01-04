@@ -188,24 +188,26 @@ FROM customer_stats;
 -- Business Value: Helps define the "window of opportunity" for retargeting emails.
 -- --------------------------------------------------------------------------
 WITH customer_orders AS (
-    SELECT DISTINCT customer_id, invoice_no, order_date
+SELECT DISTINCT 
+        customer_id, 
+        date(order_date) as purchase_day
     FROM retail_transactions
+    WHERE quantity > 0
 ),
 ranked_orders AS (
     SELECT 
         customer_id,
-        order_date,
-        ROW_NUMBER() OVER(PARTITION BY customer_id ORDER BY order_date) as rn
+        purchase_day,
+        ROW_NUMBER() OVER(PARTITION BY customer_id ORDER BY purchase_day) as day_rank
     FROM customer_orders
 ),
 second_purchase_diff AS (
     SELECT 
         t1.customer_id,
-        -- Calculate gap between 2nd (t2) and 1st (t1) purchase
-        (t2.order_date - t1.order_date) as days_diff
+        (t2.purchase_day - t1.purchase_day) as days_diff
     FROM ranked_orders t1
     JOIN ranked_orders t2 ON t1.customer_id = t2.customer_id
-    WHERE t1.rn = 1 AND t2.rn = 2 
+    WHERE t1.day_rank = 1 AND t2.day_rank = 2 
 )
 SELECT 
     ROUND(AVG(days_diff), 1) as avg_days_to_2nd_order,
