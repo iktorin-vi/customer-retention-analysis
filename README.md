@@ -1,5 +1,4 @@
 # Customer Retention & Cohort Analysis
-# 🛒 Customer Retention & Cohort Analysis
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
@@ -16,7 +15,7 @@ By tracking user behavior over time, I identified key patterns in customer loyal
 
 ---
 
-## 💼 Business Problem
+##  Business Problem
 Customer acquisition is expensive. For a business to grow sustainable revenue, it must retain existing users. The key business questions addressed in this analysis are:
 
 * **The "Leaky Bucket":** At what point do we lose the majority of our customers?
@@ -46,12 +45,12 @@ The dataset contains transaction data for a UK-based online wholesaler (2010-201
 ---
 
 ## 📊 Methodology
-1.  **Data Cleaning:** Handled missing `CustomerID`s, removed cancelled transactions ('C' prefix), and validated date ranges.
+1.  **Data Cleaning:** Handled missing `CustomerID`s, duplacates and validated date ranges.
 2.  **Cohort Engineering:** Assigned a **Cohort Month** (first purchase month) to every user and calculated the **Cohort Index** (months since first purchase).
 3.  **SQL Analysis:** Calculated monthly retention rates, churn rates, and repeat purchase ratios using complex SQL queries.
 4.  **Visualization:** Built retention heatmaps and curves to visualize the decay in user activity.
 
-### 🔑 Key Metrics Definitions
+### Key Metrics Definitions
 * **Retention Rate:** The percentage of the original cohort that made a purchase in a subsequent month.
 * **Churn Rate:** Percentage of customers who haven't made a purchase in 90+ days.
 * **Repeat Purchase Rate:** Percentage of customers with >1 unique invoice.
@@ -61,11 +60,11 @@ The dataset contains transaction data for a UK-based online wholesaler (2010-201
 
 ## 💡 Key Insights
 
-📉 **The "Cliff" Drop-off**
-Retention drops from 100% to **~20-25% immediately in Month 1**. This indicates a struggle with activation—most users buy once and leave.
-
-👤 **High One-Time Buyer Ratio**
-**~65-70%** of the customer base made only a single purchase.
+👥 **Strong Customer Loyalty**
+Contrary to typical e-commerce trends where churn is high, this business enjoys a **high retention rate**.
+* **65.58%** of customers are **Repeat Buyers** (purchased 2+ times).
+* Only **34.42%** are One-Time buyers.
+* Total unique customers analyzed: **4,338**.
 
 🎄 **Seasonal Outlier**
 The **December 2010** cohort performed significantly better (~37% retention in Month 1) compared to 2011 cohorts, suggesting high-quality holiday traffic.
@@ -75,10 +74,10 @@ For customers who do return, the median time to the second purchase is **~50 day
 
 ---
 
-## 🚀 Business Recommendations
+## Business Recommendations
 
 1.  **Automated Reactivation Flow (Day 45):** Since the median time to repurchase is 50 days, send a personalized email/offer at Day 45 to nudge users before they slip away.
-2.  **Focus on the Second Purchase:** With 70% of users being one-time buyers, the marketing strategy should shift from "Acquisition" to "Activation". Implement a post-purchase onboarding series (e.g., "How to use", Cross-sell).
+2.  **Bridge the "Month 2" Gap:** The analysis reveals a steep drop-off immediately after the first month. To fix this "leaky bucket," marketing efforts must specifically **incentivize a second purchase in the month following the first transaction**.
 3.  **Investigate Holiday Strategy:** Analyze the marketing channels used in Dec 2010. The users acquired then were more loyal—replicating that strategy could improve overall cohort quality.
 
 ---
@@ -91,14 +90,14 @@ git clone [https://github.com/your-username/customer-retention-analysis.git](htt
 cd customer-retention-analysis
 This project analyzes customer retention and repeat purchase behavior using e-commerce transactional data.
 
-## Objectives
-- Analyze customer retention and churn
-- Perform cohort analysis
-- Identify repeat purchase patterns
+### 2. Install
+pip install pandas matplotlib seaborn sqlalchemy psycopg2
+### 3.Run the analysis
+Run the Jupyter Notebooks in the notebooks/ folder sequentially:
+01_data_cleaning.ipynb
+02_visual_analysis.ipynb
+SQL scripts are available in the sql/ folder.
+The Tableau workbook (.twbx) is located in the tableau/ folder.
 
-## Tech Stack
-- Python (Pandas)
-- PostgreSQL
-- SQL
-- Matplotlib
-- Tableau
+Done by : Viktoriia Kazniienko
+LinkedIn: https://www.linkedin.com/in/viktoriia-kazniienko-71605b327/
