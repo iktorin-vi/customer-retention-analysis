@@ -87,7 +87,7 @@ For customers who do return, the median time to the second purchase is **~50 day
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/your-username/customer-retention-analysis.git](https://github.com/your-username/customer-retention-analysis.git)
+git clone [https://github.com/iktorin-vi/customer-retention-analysis.git](https://github.com/your-username/customer-retention-analysis.git)
 cd customer-retention-analysis
 This project analyzes customer retention and repeat purchase behavior using e-commerce transactional data.
 
