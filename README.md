@@ -5,6 +5,7 @@
 ![SQL](https://img.shields.io/badge/PostgreSQL-Advanced%20Analytics-336791?style=for-the-badge&logo=postgresql)
 ![Tableau](https://img.shields.io/badge/Tableau-Visualization-E97627?style=for-the-badge&logo=tableau)
 
+Tableau link: https://public.tableau.com/app/profile/viktoriia.kazniienko/viz/CustomerRetention_17675576526660/Dashboard1
 <img width="1360" height="857" alt="image_2026-01-05_14-16-11" src="https://github.com/user-attachments/assets/791f3c9f-2bc5-4c78-a292-ad39b7b95148" />
 
 
