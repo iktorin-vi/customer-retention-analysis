@@ -1,8 +1,8 @@
 # Customer Retention & Cohort Analysis
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
-![SQL](https://img.shields.io/badge/PostgreSQL-Data%20Engineering-336791?style=for-the-badge&logo=postgresql)
+![Pandas](https://img.shields.io/badge/Pandas-Feature%20Engineering-150458?style=for-the-badge&logo=pandas)
+![SQL](https://img.shields.io/badge/PostgreSQL-Advanced%20Analytics-336791?style=for-the-badge&logo=postgresql)
 ![Tableau](https://img.shields.io/badge/Tableau-Visualization-E97627?style=for-the-badge&logo=tableau)
 
 <img width="1360" height="857" alt="image_2026-01-05_14-16-11" src="https://github.com/user-attachments/assets/791f3c9f-2bc5-4c78-a292-ad39b7b95148" />
