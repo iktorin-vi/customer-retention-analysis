@@ -39,7 +39,7 @@ The project follows a full-cycle data engineering and analytics pipeline:
 ## 📂 Data Description
 The dataset contains transaction data for a UK-based online wholesaler (2010-2011).
 
-* **Source:** [Online Retail Dataset (Kaggle/UCI)](https://archive.ics.uci.edu/ml/datasets/online+retail)
+* **Source:** E-Commerce Data https://www.kaggle.com/datasets/carrie1/ecommerce-data
 * **Size:** ~540k rows.
 * **Key Features:** `InvoiceNo`, `StockCode`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`.
 
